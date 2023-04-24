@@ -43,7 +43,7 @@ body {
 	.container-leftM {
   		display:none;
 	  }
-	
+	.tabletmap{display:none;}
 			/*top banner-navigation -menu settings for desktop*/
 	.topnav {
   		overflow: hidden;
@@ -200,6 +200,7 @@ body {
 		overflow: hidden;
 		background-color: white;
   	}
+	.deskmap{display:none;}
 	
 	input[type=button], input[type=submit], input[type=reset]
 {
@@ -272,6 +273,7 @@ body {
 	.navtab {
   		display:none;
 	}
+	.deskmap{display:none;}
 	.navmobile{
 		overflow: hidden;
 		background-color: white;
