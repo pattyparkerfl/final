@@ -126,7 +126,7 @@
 		var mistakes = 0;
 		var i = 0;
 		
-		
+		/*game function student inputs answer on form. If correct they go to next element. If incorrect they are instructed to try again. The gane track the number of mistakes. Hints appear at mistake 2 up to mistake 7 and then they are instructed to get help from their teacher*/
 		function playGame (){
 			var checkAnswer = false;
 			var newAnswer = document.gameForm.guess.value;
@@ -135,7 +135,7 @@
 			if (newAnswer == elements[i]) {
             		checkAnswer = true;
 					i = i +1;
-            		document.getElementById("results").innerHTML = "Grreat job! " + newAnswer+ " is correct. ";
+            		document.getElementById("results").innerHTML = "Grreat job! " + newAnswer+ " is correct. Guess the next element";
 					document.getElementById("whoami").src = imgArray[i].src;				
             		}
 			
@@ -172,10 +172,7 @@
 				document.getElementById("gamestatus").innerHTML = "Game Over. Great Job! ";
 				document.getElementById("hint").innerHTML = " ";
 				}
-			else{
-				document.getElementById("gamestatus").innerHTML = "Guess the next element ";
 			}
-		}
 		
 	</script>
 </head>
@@ -225,19 +222,19 @@
 		<img src="images/logo1.jpg" align = "right" width ="30%" alt ="logo">
 	</div>
 	
-	<!--map of periodic table to create columns of clickable families - tablet
+	<!--map of periodic table to create columns of clickable families - tablet-->
 	
 		<div class ="pointer">
 			<map name="familymaptab">
-  				<area shape="rect" coords="82,174,33,549" alt="alklai" onclick="alkaliLesson()">
-				<area shape="rect" coords="96,548,140,175" alt="alklaline earth" onclick="earthLesson()">
-				<area shape="rect" coords="701,548,152,302" alt="transition metals" onclick="transitionLesson()">
-				<area shape="rect" coords="932,172,979,486" alt="halogens" onclick="halogenLesson()">
-				<area shape="rect" coords="990,111,1040,552"  alt="noble gases" onclick="nobleLesson()">
-				<area shape="rect" coords="1037,589,208,648"  alt="lanthanides" onclick="lanthanideLesson()">
-				<area shape="rect" coords="1035,663,204,723" alt="actinidess" onclick="actinideLesson()">
+  				<area shape="rect" coords="30,147,73,467" alt="alklai" onclick="alkaliLesson()">
+				<area shape="rect" coords="81,148,123,466" alt="alklaline earth" onclick="earthLesson()">
+				<area shape="rect" coords="128,255,743,465" alt="transition metals" onclick="transitionLesson()">
+				<area shape="rect" coords="787,147,833,473" alt="halogens" onclick="halogenLesson()">
+				<area shape="rect" coords="839,95,884,463" alt="noble gases" onclick="nobleLesson()">
+				<area shape="rect" coords="171,499,881,547" alt="lanthanides" onclick="lanthanideLesson()">
+				<area shape="rect" coords="172,563,881,615" alt="actinidess" onclick="actinideLesson()">
 			</map>
-		</div>-->
+		</div>
 	
      	<div class ="pointer">
 			<map name="familymap">
@@ -252,23 +249,24 @@
 		</div>
 	
 		<!--desktop and tablet container to hold buttons to get lessons on trends and clickable periodic table-->
-	<div class= "container-left">
-		<h2 style="color:white;">Select the different sections on the periodic table to learn about that family of elements.</h2>
+		<div class= "container-left">
+			<h2 style="color:white;">Select the different sections on the periodic table to learn about that family of elements.</h2>
 		
-		
-		<!--display lesson image desktop-->
-   		
-			<img src = "images/families.png" id ="ptable"  width ="100%" alt="Families" usemap="#familymap"><br><br>
-		
-	
-				
-		<!--buttons for trends-->
-		<input type="button" value = "atomic radius" onclick=  "displayRadius()" name="writeRadius"/>
-		<input type="button" value = "ionization energy" onclick= "displayIons()" name="writeIons"/>
-		<input type="button" value = "electronegativity" onclick= "displayElectro() " name="writeElectro"/>
-		<input type="button" value = "boiling/melting points" onclick= "displayMelt() " name="writeMelt"/> 
-		<h2 style="color:white;">Select a periodic trend to learn about that trend.</h2><br>
-  	</div>
+			<div class="deskmap">
+			<!--display lesson image desktop-->
+   			<img src = "images/families.png" id ="ptable"  width ="100%" alt="Families" usemap="#familymap"><br><br>
+			</div>
+			<div class="tabletmap">
+			<!--display lesson image desktop-->
+   			<img src = "images/families.png" id ="ptable2"  width ="100%" alt="Families" usemap="#familymaptab"><br><br>
+					</div>	
+			<!--buttons for trends-->
+			<input type="button" value = "atomic radius" onclick=  "displayRadius()" name="writeRadius"/>
+			<input type="button" value = "ionization energy" onclick= "displayIons()" name="writeIons"/>
+			<input type="button" value = "electronegativity" onclick= "displayElectro() " name="writeElectro"/>
+			<input type="button" value = "boiling/melting points" onclick= "displayMelt() " name="writeMelt"/> 
+			<h2 style="color:white;">Select a periodic trend to learn about that trend.</h2><br>
+  		</div>
 	
 	<!--mobile container to hold buttons to get lessons on trends and periodic table --->
 	<div class= "container-leftM">
@@ -312,13 +310,6 @@
 		<img src="images/logo1Sm.jpg" alt = "logo">
 	</div>
 	
-	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="jquery.rwdImageMaps.min.js"></script>
-<script>
-$(document).ready(function(e) {
-	$('img[usemap]').rwdImageMaps();
 	
-	});
-	</script>-->
 </body>
 </html>
